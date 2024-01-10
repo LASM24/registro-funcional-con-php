@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <label for="cedula">Cedula</label>
+        <input type="text" id="cedula" name="cedula" pattern="[0-9]{7,12}" />
+
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" name="nombres" />
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" />
+
+        <label for="whatsApp">WhatsApp</label>
+        <input type="text" id="whatsApp" name="whatsApp" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="direccion">Dirección:</label>
+        <input type="address" id="direccion" name="direccion" />
+
+        <section class="ubicacion">
+            <label for="Pais">Pais</label>
+            <select name="Pais" id="paises" onchange="cargarDepartamentos()">
+                <option value="#">-</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Mexico">México</option>
+            </select>
+
+            <label for="Departamento">Departamento</label>
+            <select name="Departamento" id="departamentos" onchange="cargarCiudades()">
+                <option value="#">-</option>
+            </select>
+
+            <label for="ciudad">Ciudad/localidad</label>
+            <select name="ciudad" id="ciudades">
+                <option value="#">-</option>
+            </select>
+        </section>
+
+        <input type="submit" value="Enviar" id="enviar" />
+    </form>
+    <script src="../JS/main.js"></script>
+</body>
+
+</html>

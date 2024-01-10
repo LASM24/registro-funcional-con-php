@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Login</title>
+    <script src="../js/re_log.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1> ¡Bienvenido de nuevo! </h1>
+            <p class="text">Esta es una excelente web de prestamos que cree y ayuda a personas emprendedoras</p>
+            <button id="loginButton">Iniciar Sesión</button>
+            <button id="registrationButton">Registro</button>
+        </div>
+
+        <div class="right-section">
+            <div id="registrationSection">
+                <h2>Registro de Usuario</h2>
+                <form id="registrationForm">
+                    <label for="regUsername">Usuario:</label>
+                    <input type="text" id="regUsername" name="regUsername" required>
+
+                    <label for="regPassword">Contraseña:</label>
+                    <input type="password" id="regPassword" name="regPassword" required>
+
+                    <button type="button" onclick="registerUser()">Registrarse</button>
+                </form>
+            </div>
+
+            <div id="loginSection">
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm">
+                    <label for="loginUsername">Usuario:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required>
+
+                    <label for="loginPassword">Contraseña:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+
+                    <button type="button" onclick="loginUser()">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

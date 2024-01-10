@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url(../assets/flogin.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    margin: 50px auto;
+    background: rgba(256, 256, 256, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #217dbb;
+}
+
+/* Estilos para la sección izquierda */
+.left-section {
+    width: 45%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#registrationButton,
+#loginButton {
+    display: block;
+    margin: 10px;
+    background-color: #217dbb;
+    width: 40%;
+    margin: 20px auto;
+}
+
+#loginButton{
+    margin-top: 3rem;
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    padding-top: 3rem;
+    padding-left: 2.5rem;
+    width: 55%;
+}

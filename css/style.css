@@ -1,0 +1,42 @@
+/* Generales */
+
+body {
+    background: url(../assets/fhome.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  /* Formulario */
+  form {
+    width: 30rem;
+    margin: 3rem auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .6);
+  }
+  
+  label,
+  input,
+  textarea,
+  select {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 30%;
+  }
+  
+  /* Inputs */
+  
+  label {
+    color: aliceblue;
+  }
+  /* Botones */
+  #enviar {
+    width: 20%; /* Modificado el ancho para ocupar el 100% del contenedor */
+    height: 30px;
+    color: #000;
+  }
+  
+  /* Secciones */
+  .ubicacion {
+    margin-top: 1rem;
+  }
+  
