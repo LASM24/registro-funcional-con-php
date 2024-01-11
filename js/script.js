@@ -3,7 +3,7 @@ async function registerUser() {
         var regUsername = document.getElementById("regUsername").value;
         var regPassword = document.getElementById("regPassword").value;
 
-        var response = await sendRequest("POST", "register.php", {
+        var response = await sendRequest("POST", "../php/register.php", {
             regUsername: regUsername,
             regPassword: regPassword
         });
