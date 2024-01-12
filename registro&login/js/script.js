@@ -24,8 +24,17 @@ async function loginUser() {
             loginPassword: loginPassword
         });
 
-        if (response === "success") {
-            window.location.href = "index.html";
+        var responseArray = response.split("|");
+
+        if (responseArray[0] === "success") {
+            var rol = responseArray[1];
+            if (rol === "admin") {
+                window.location.href = "../../admin/html/index.html";
+            } else if (rol === "cliente") {
+                window.location.href = "../../client/html/index.html";
+            } else {
+                alert("Error: Rol no reconocido");
+            }
         } else {
             alert("Error al iniciar sesión. Verifica tus credenciales.");
         }

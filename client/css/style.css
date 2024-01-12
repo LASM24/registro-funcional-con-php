@@ -1,7 +1,7 @@
 /* Generales */
 
 body {
-    background: url(../assets/fhome.jpg) no-repeat;
+    background: url(../../assets/fhome.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
   }

@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     if (password_verify($loginPassword, $row['password'])) {
-        echo "success";
+        echo "success|" . $row['rol'];
     } else {
         echo "Invalid credentials";
     }
