@@ -1,3 +1,5 @@
+/* ESTO ES PARA CAMBIAR ENTRE REGISTRO Y LOGIN EN REGISTRO&LOGIN.HTML */
+
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener referencias a las secciones y botones
     var registrationSection = document.getElementById("registrationSection");
