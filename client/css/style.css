@@ -1,42 +1,113 @@
 /* Generales */
 
 body {
-    background: url(../../assets/fhome.jpg) no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  
-  /* Formulario */
-  form {
-    width: 30rem;
-    margin: 3rem auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, .6);
-  }
-  
-  label,
-  input,
-  textarea,
-  select {
+  background: url(../../assets/fhome.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ececec;
+}
+
+.logo {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
     display: block;
-    margin-bottom: 10px;
-    margin-left: 30%;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
   }
-  
-  /* Inputs */
-  
-  label {
-    color: aliceblue;
+
+  .abrir-menu {
+    color: #1c1c1c;
   }
-  /* Botones */
-  #enviar {
-    width: 20%; /* Modificado el ancho para ocupar el 100% del contenedor */
-    height: 30px;
-    color: #000;
+
+  .cerrar-menu {
+    color: #ececec;
   }
-  
-  /* Secciones */
-  .ubicacion {
-    margin-top: 1rem;
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
-  
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }_
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ecececec;
+  }
+}
+/* Formulario */
+form {
+  width: 30rem;
+  margin: 3rem auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+label,
+input,
+textarea,
+select {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 30%;
+}
+
+/* Inputs */
+
+label {
+  color: aliceblue;
+}
+/* Botones */
+#enviar {
+  width: 20%; /* Modificado el ancho para ocupar el 100% del contenedor */
+  height: 30px;
+  color: #000;
+}
