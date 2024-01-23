@@ -1,31 +1,30 @@
 <?php
-// Configuración de la conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "usuarios";
+// Conexión a la base de datos
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "usuarios"; 
 
-try {
-    $conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT id, username FROM usuarios";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        echo "<table>";
-        echo "<tr><th>ID</th><th>Username</th></tr>";
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["id"] . "</td><td>" . $row["username"] . "</td></tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "No se encontraron usuarios.";
-    }
-} finally {
-    $conn->close();
+if ($conn->connect_error) {
+    die("Error en la conexión: " . $conn->connect_error);
 }
+
+
+$sql = "SELECT * FROM usuarios";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Mostrar los registros
+    while ($row = $result->fetch_assoc()) {
+        echo "El ID es: " . $row["id"] . "<br>";
+        echo "El Username es: " . $row["username"];
+        echo "<br>";
+    }
+} else {
+    echo "No se encontraron registros.";
+}
+
+$conn->close();
 ?>
